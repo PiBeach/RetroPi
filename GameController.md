@@ -1,5 +1,4 @@
 //Code for the controller with six playing buttons, two buttons for coin and start, and a joystick
-
 #include <Keyboard.h>
 void setup() {
   Keyboard.begin();
@@ -16,6 +15,8 @@ void setup() {
   pinMode(7, INPUT_PULLUP); //Button 4
   pinMode(8, INPUT_PULLUP); //Coin
   pinMode(9, INPUT_PULLUP); //Start
+  pinMode(10, INPUT_PULLUP);
+  pinMode(11, INPUT_PULLUP);
 }
 
 
@@ -75,19 +76,19 @@ void loop() {
 
   // Button 1 - 1
   if (button1 == HIGH) {
-    Keyboard.press(32);
+    Keyboard.press(49);
   }
   else {
-    Keyboard.release(32);
+    Keyboard.release(49);
   }
 
 
   // Button 2 - 2
   if (button2 == HIGH) {
-    Keyboard.press(10); delay(100);
+    Keyboard.press(50);
   }
   else {
-    Keyboard.release(10);
+    Keyboard.release(50);
   }     
 
   // Button 3 - b
@@ -101,10 +102,10 @@ void loop() {
 
   // Button 4 - y
   if (button4 == HIGH) {
-    Keyboard.press(49);
+    Keyboard.press(121);
   }
   else {
-    Keyboard.release(49);
+    Keyboard.release(121);
   }
 
   // Button 5 - a
@@ -115,7 +116,7 @@ void loop() {
     Keyboard.release(97);
   }
 
-  // Button 6 - b
+  // Button 6 - x
   if (button6 == HIGH) {
     Keyboard.press(120);
   }
@@ -125,16 +126,16 @@ void loop() {
 
 
   // Coin - enter
-  if (coin == HIGH) {
-    Keyboard.press(13);
+ if (coin == LOW) {
+    Keyboard.press(10);
   }
   else {
-    Keyboard.release(13);
+    Keyboard.release(10);
   }
 
 
-  // Start - spacebar
-  if (start == HIGH) {
+// Start - spacebar
+  if (start == LOW) {
     Keyboard.press(32); delay(100);
   }
   else {
