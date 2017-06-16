@@ -130,10 +130,10 @@ void loop() {
   
   // Coin - enter  
   if (coin == LOW) {   
-    Serial.println("coin print 13");  
+    Serial.println("coin print 10");  
   }  
 //  else {  
-//    Serial.println("coin release 13");  
+//    Serial.println("coin release 10");  
 //  }  
   
   
