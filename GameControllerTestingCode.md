@@ -1,8 +1,8 @@
 //Run this script and use the serial monitor to check that all buttons are sending the right signal.  
   
   
-  #include <Keyboard.h>
-  void setup() {  
+   #include <Keyboard.h>
+  void setup() {
   Serial.begin(9600);
   Serial.flush();  
   Keyboard.begin();
@@ -129,7 +129,7 @@ void loop() {
 //  }
   
   // Coin - enter  
-  if (coin == LOW) {  
+  if (coin == LOW) {   
     Serial.println("coin print 13");  
   }  
 //  else {  
